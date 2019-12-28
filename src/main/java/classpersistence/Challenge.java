@@ -6,6 +6,16 @@ import java.util.Set;
 
 public class Challenge {
     private Client rClient;
+    private Set<Client> rrClient;
+
+    public Set<Client> getRrClient() {
+        return rrClient;
+    }
+
+    public void setRrClient(Set<Client> rrClient) {
+        this.rrClient = rrClient;
+    }
+
     private int id,state;
     private Date createdDate,startingDate,endingDate;
     private Set<Photo> rPhoto;
@@ -175,5 +185,13 @@ public class Challenge {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    public Set<Note> getrNote() {
+        return rNote;
+    }
+
+    public void setrNote(Set<Note> rNote) {
+        this.rNote = rNote;
     }
 }

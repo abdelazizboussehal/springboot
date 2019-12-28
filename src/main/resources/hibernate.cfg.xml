@@ -32,6 +32,10 @@
 	    <!-- déclaration de tous les fichiers de mapping -->
         <mapping resource="HBM/Administrator.hbm.xml"/>
         <mapping resource="HBM/Client.hbm.xml"/>
+        <mapping resource="HBM/Challenge.hbm.xml"/>
+        <mapping resource="HBM/Photo.hbm.xml"/>
+        <mapping resource="HBM/Comment.hbm.xml"/>
+        <mapping resource="HBM/Note.hbm.xml"/>
 
     </session-factory>
 </hibernate-configuration>

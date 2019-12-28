@@ -3,13 +3,10 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="classpersistence.Client" table="Client">
+    <class name="classpersistence.Client" table="client">
         <id name="id" type="integer">
             <column name="id" />
         </id>
-        <property name="email" type="string">
-            <column name="email" />
-        </property>
         <property name="lastname" type="string">
             <column name="lastname" />
         </property>
@@ -22,8 +19,21 @@
         <property name="password" type="string">
             <column name="password" />
         </property>
+
         <property name="birthDate" type="string">
             <column name="birthDate" />
         </property>
+
+        <property name="phoneNumber" type="string">
+            <column name="phoneNumber" />
+        </property>
+
+        <property name="androidVersion" type="string">
+            <column name="androidVersion" />
+        </property>
+        <set name="rChallenge" cascade="all">
+            <key column="id_user"/>
+            <one-to-many class="classpersistence.Challenge" />
+        </set>
     </class>
 </hibernate-mapping>

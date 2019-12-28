@@ -7,11 +7,20 @@ public class Comment {
 private int id;
 private String content;
 private Date creationDate ;
-private boolean isEnabled;
-private Client rClient;
-
+private int isEnabled;
     public Comment() {
     }
+
+    public int getIsEnabled() {
+        return isEnabled;
+    }
+
+    public void setIsEnabled(int isEnabled) {
+        this.isEnabled = isEnabled;
+    }
+
+    private Client rClient;
+
 
     public int getId() {
         return id;
@@ -37,13 +46,6 @@ private Client rClient;
         this.creationDate = creationDate;
     }
 
-    public boolean isEnabled() {
-        return isEnabled;
-    }
-
-    public void setEnabled(boolean enabled) {
-        isEnabled = enabled;
-    }
 
     public Client getrClient() {
         return rClient;
