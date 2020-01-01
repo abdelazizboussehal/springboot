@@ -20,6 +20,7 @@
         <!-- valeur = update c-à-d si les tables de la base n'existent pas elles sont crees, sinon elles sont mises à jour, 
 			 valeur = create c-à-d creation à chaque lancement  -->
         <property name="hbm2ddl.auto">update</property>
+        <property name="hibernate.jdbc.use_get_generated_keys">true</property>
         <!-- Le SQL généré est affiché sur la console -->
         <property name="hibernate.show_sql">true</property>
         <!-- Pretty format le SQL généré -->

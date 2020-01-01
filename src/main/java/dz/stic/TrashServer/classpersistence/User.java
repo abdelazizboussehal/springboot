@@ -1,4 +1,4 @@
-package classpersistence;
+package dz.stic.TrashServer.classpersistence;
 
 import java.util.Date;
 import java.util.Objects;
@@ -7,6 +7,15 @@ public abstract class User {
     protected int id;
     protected String lastname,fisrtName,userName,password;
     protected Date birthDate;
+    public User(){};
+    public User(int id, String lastname, String fisrtName, String userName, String password, Date birthDate) {
+        this.id = id;
+        this.lastname = lastname;
+        this.fisrtName = fisrtName;
+        this.userName = userName;
+        this.password = password;
+        this.birthDate = birthDate;
+    }
 
     public int getId() {
         return id;

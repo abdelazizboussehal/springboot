@@ -1,4 +1,4 @@
-package classpersistence;
+package dz.stic.TrashServer.classpersistence;
 
 import java.util.Objects;
 
@@ -8,6 +8,16 @@ public class Address {
     private String street ,city,zipCode,country;
 
     public Address() {
+    }
+
+    public Address(int id, double longitude, double latitude, String street, String city, String zipCode, String country) {
+        this.id = id;
+        this.longitude = longitude;
+        this.latitude = latitude;
+        this.street = street;
+        this.city = city;
+        this.zipCode = zipCode;
+        this.country = country;
     }
 
     public int getId() {

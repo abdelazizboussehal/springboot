@@ -1,5 +1,6 @@
-package classpersistence;
+package dz.stic.TrashServer.classpersistence;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,10 +11,11 @@ public class Client extends User {
     public Client() {
     }
 
-    public Client(String phoneNumber, String androidVersion) {
-        rChallenge=new HashSet<>();
+    public Client(int id, String lastname, String fisrtName, String userName, String password, Date birthDate, String phoneNumber, String androidVersion) {
+        super(id, lastname, fisrtName, userName, password, birthDate);
         this.phoneNumber = phoneNumber;
         this.androidVersion = androidVersion;
+        this.rChallenge =new HashSet<>();
     }
 
     public String getPhoneNumber() {

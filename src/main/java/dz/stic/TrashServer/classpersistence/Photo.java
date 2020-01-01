@@ -1,4 +1,4 @@
-package classpersistence;
+package dz.stic.TrashServer.classpersistence;
 
 import java.util.Date;
 import java.util.Objects;

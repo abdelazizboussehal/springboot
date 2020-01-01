@@ -1,4 +1,4 @@
-package classpersistence;
+package dz.stic.TrashServer.classpersistence;
 
 import java.util.Objects;
 
@@ -8,6 +8,11 @@ public class Note {
     private Client rClient;
 
     public Note() {
+    }
+
+    public Note(int id, int noteValue) {
+        this.id = id;
+        this.noteValue = noteValue;
     }
 
     public int getNoteValue() {
