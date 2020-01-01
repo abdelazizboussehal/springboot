@@ -1,4 +1,4 @@
-package classpersistence;
+package dz.stic.TrashServer.classpersistence;
 
 import java.util.Date;
 import java.util.Objects;
@@ -9,6 +9,13 @@ private String content;
 private Date creationDate ;
 private int isEnabled;
     public Comment() {
+    }
+
+    public Comment(String content, Date creationDate, int isEnabled) {
+        this.id = id;
+        this.content = content;
+        this.creationDate = creationDate;
+        this.isEnabled = isEnabled;
     }
 
     public int getIsEnabled() {

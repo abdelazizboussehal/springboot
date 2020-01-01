@@ -3,9 +3,11 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="classpersistence.Challenge" table="challenge">
-        <id name="id" type="integer">
-            <column name="id" />
+    <class name="dz.stic.TrashServer.classpersistence.Challenge" table="challenge">
+        <id name="id" type="integer" column="ID">
+            <generator class="sequence-identity">
+                <param name="sequence">seqChallenge</param>
+            </generator>
         </id>
         <property name="createdDate" type="date">
             <column name="createdDate" />
@@ -20,7 +22,7 @@
             <column name="endingDate" />
         </property>
 
-        <component name="address" class="classpersistence.Address" insert="true" update="true" >
+        <component name="address" class="dz.stic.TrashServer.classpersistence.Address" insert="true" update="true" >
             <property name="latitude" type="double">
                 <column name="latitude" />
             </property>
@@ -41,22 +43,22 @@
             </property>
         </component>
 
-        <set name="rPhoto" cascade="all">
+        <set name="rPhoto" cascade="all" lazy="false" fetch="join" >
             <key column="id_challenge"/>
-            <one-to-many class="classpersistence.Photo" />
+            <one-to-many class="dz.stic.TrashServer.classpersistence.Photo" />
         </set>
 
         <set name="rComment" cascade="all" >
             <key column="id_challenge"/>
-            <one-to-many class="classpersistence.Comment" />
+            <one-to-many class="dz.stic.TrashServer.classpersistence.Comment" />
         </set>
         <set name="rNote" cascade="all" >
             <key column="id_challenge"/>
-            <one-to-many class="classpersistence.Note" />
+            <one-to-many class="dz.stic.TrashServer.classpersistence.Note" />
         </set>
         <set name="rrClient" table="participant" cascade="all">
             <key column="id_challenge"/>
-            <many-to-many column="id_user" class="classpersistence.Client" />
+            <many-to-many column="id_user" class="dz.stic.TrashServer.classpersistence.Client" />
         </set>
 
 

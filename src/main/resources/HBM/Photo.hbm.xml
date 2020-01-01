@@ -3,9 +3,11 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="classpersistence.Photo" table="photo">
-        <id name="id" type="integer">
-            <column name="id" />
+    <class name="dz.stic.TrashServer.classpersistence.Photo" table="photo">
+        <id name="id" type="integer" column="ID">
+            <generator class="sequence-identity">
+                <param name="sequence">seqPhoto</param>
+            </generator>
         </id>
         <property name="path" type="string">
             <column name="path" />

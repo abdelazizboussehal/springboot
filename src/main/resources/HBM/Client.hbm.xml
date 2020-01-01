@@ -3,11 +3,12 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="classpersistence.Client" table="client">
-        <id name="id" type="integer">
-            <column name="id" />
-        </id>
-        <property name="lastname" type="string">
+    <class name="dz.stic.TrashServer.classpersistence.Client" table="client">
+        <id name="id" type="integer" column="ID">
+            <generator class="sequence-identity">
+                <param name="sequence">seqClient</param>
+            </generator>
+        </id>        <property name="lastname" type="string">
             <column name="lastname" />
         </property>
         <property name="fisrtName" type="string">
@@ -33,7 +34,7 @@
         </property>
         <set name="rChallenge" cascade="all">
             <key column="id_user"/>
-            <one-to-many class="classpersistence.Challenge" />
+            <one-to-many class="dz.stic.TrashServer.classpersistence.Challenge" />
         </set>
     </class>
 </hibernate-mapping>

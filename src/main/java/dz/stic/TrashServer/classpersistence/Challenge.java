@@ -1,27 +1,38 @@
-package classpersistence;
+package dz.stic.TrashServer.classpersistence;
 
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
 public class Challenge {
     private Client rClient;
-    private Set<Client> rrClient;
+    private Set<Client> rrClient=new HashSet<>();
+    private int id,state;
+    private Date createdDate,startingDate,endingDate;
+    private Set<Photo> rPhoto=new HashSet<>();
+    private Address address;
+    private Set<Note> rNote=new HashSet<>();
+    private Set<Comment> rComment=new HashSet<>();
 
     public Set<Client> getRrClient() {
         return rrClient;
+    }
+
+    public Challenge(int state, Date createdDate, Date startingDate, Date endingDate, Address address) {
+
+        this.state = state;
+        this.createdDate = createdDate;
+        this.startingDate = startingDate;
+        this.endingDate = endingDate;
+        this.address = address;
+
     }
 
     public void setRrClient(Set<Client> rrClient) {
         this.rrClient = rrClient;
     }
 
-    private int id,state;
-    private Date createdDate,startingDate,endingDate;
-    private Set<Photo> rPhoto;
-    private Address address;
-    private Set<Note> rNote;
-    private Set<Comment> rComment;
 
     public Challenge() {
     }

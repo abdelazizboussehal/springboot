@@ -3,9 +3,11 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="classpersistence.Comment" table="commentt">
-        <id name="id" type="integer">
-            <column name="id" />
+    <class name="dz.stic.TrashServer.classpersistence.Comment" table="commentt">
+        <id name="id" type="integer" column="ID">
+            <generator class="sequence-identity">
+                <param name="sequence">seqCommentt</param>
+            </generator>
         </id>
         <property name="content" type="string">
             <column name="content" />
